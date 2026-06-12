@@ -324,6 +324,16 @@ export function createJsonTranslatorWithValidator<T extends object>(
         logFnOverride?: (msg: any) => void,
         signal?: AbortSignal,
     ) => {
+
+		if(typeof prompt === "string") {
+			console.log(`prompt in createJsonTranslatorWithValidator: ${prompt}`);
+		}
+		else {
+			for(var message in prompt) {
+				console.log(`message in prompt in createJsonTranslatorWithValidator: ${message}`);
+			}
+		}
+
         // Extract the smuggled signal (and any other model params) from the
         // prompt sections so callers of translator.translate(request, preamble, signal)
         // can propagate cancellation all the way down to the HTTP request.

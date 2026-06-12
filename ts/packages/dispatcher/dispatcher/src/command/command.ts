@@ -435,6 +435,12 @@ function endProcessCommand(
     return result;
 }
 
+//
+// NOTE TO SELF: This seems to be the entry point for actually doing dispatch and 
+// response generation! This should be our starting point for understanding how to
+// do our response interception
+//
+
 export async function processCommand(
     originalInput: string,
     context: CommandHandlerContext,

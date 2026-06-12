@@ -537,6 +537,9 @@ async function translateWithTranslator(
         ProfileNames.translate,
     );
 
+	console.log(`request from translateWithTranslator: ${request}`);
+
+
     let firstToken = true;
     let streamFunction: IncrementalJsonValueCallBack | undefined;
     systemContext.streamingActionContext?.closeActionContext();
@@ -605,7 +608,17 @@ async function translateWithTranslator(
         if (!response.success) {
             throw new Error(response.message);
         }
-        return response.data;
+
+		const dummy: TranslatedAction = {
+			actionName: "generateFormula",
+			parameters: {
+				query: request,
+				formula: "beep boop",
+			},
+		};
+		return dummy;
+
+        //return response.data;
     } finally {
         profiler?.stop();
     }
