@@ -618,6 +618,10 @@ export class AppAgentManager implements ActionConfigProvider {
     public isActionEnabled(schemaName: string) {
         const appAgentName = getAppAgentName(schemaName);
         const record = this.getRecord(appAgentName);
+		for(const action of record.actions) {
+			console.log(`action: ${action}`)	
+		}
+
         return record.actions.has(schemaName);
     }
 
