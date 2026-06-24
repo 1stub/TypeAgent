@@ -1,6 +1,9 @@
 {
   "description": "Default agent provider configuration - contains all available agents",
   "agents": {
+    "excel": {
+      "name": "excel-agent"
+    },
     "player": {
       "name": "music"
     },

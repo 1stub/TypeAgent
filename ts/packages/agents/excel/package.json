@@ -1,0 +1,39 @@
+{
+  "name": "excel-agent",
+  "version": "0.0.1",
+  "description": "Excel formula generation agent - generated to satisfy the users request given a table",
+  "license": "MIT",
+  "author": "Anthony Arnold",
+  "type": "module",
+  "exports": {
+    "./agent/manifest": "./src/excelManifest.json",
+    "./agent/handlers": "./dist/excelCommandHandler.js"
+  },
+  "scripts": {
+    "build": "npm run tsc",
+    "postbuild": "copyfiles -u 1 \"src/**/config.json\" dist",
+    "clean": "rimraf --glob dist *.tsbuildinfo *.done.build.log",
+    "prettier": "prettier --check . --ignore-path ../../../.prettierignore",
+    "prettier:fix": "prettier --write . --ignore-path ../../../.prettierignore",
+    "tsc": "tsc -b"
+  },
+  "dependencies": {
+    "@typeagent/agent-sdk": "workspace:*",
+    "@typeagent/aiclient": "workspace:*",
+    "@typeagent/common-utils": "workspace:*",
+    "agent-dispatcher": "workspace:*",
+    "chat-agent": "workspace:*",
+    "debug": "^4.4.0",
+    "knowledge-processor": "workspace:*",
+    "telemetry": "workspace:*",
+    "typeagent": "workspace:*",
+    "typechat": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.12",
+    "copyfiles": "^2.4.1",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "typescript": "~5.4.5"
+  }
+}

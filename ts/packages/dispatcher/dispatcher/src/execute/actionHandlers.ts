@@ -389,6 +389,7 @@ async function canExecute(
             action.schemaName &&
             !systemContext.agents.isActionActive(action.schemaName)
         ) {
+			console.log(`${action.schemaName} is an unknown action`);
             disabled.add(action.schemaName);
         }
     }

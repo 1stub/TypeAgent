@@ -2375,6 +2375,55 @@ importers:
         specifier: ~5.4.5
         version: 5.4.5
 
+  packages/agents/excel:
+    dependencies:
+      '@typeagent/agent-sdk':
+        specifier: workspace:*
+        version: link:../../agentSdk
+      '@typeagent/aiclient':
+        specifier: workspace:*
+        version: link:../../aiclient
+      '@typeagent/common-utils':
+        specifier: workspace:*
+        version: link:../../utils/commonUtils
+      agent-dispatcher:
+        specifier: workspace:*
+        version: link:../../dispatcher/dispatcher
+      chat-agent:
+        specifier: workspace:*
+        version: link:../chat
+      debug:
+        specifier: ^4.4.0
+        version: 4.4.3(supports-color@8.1.1)
+      knowledge-processor:
+        specifier: workspace:*
+        version: link:../../knowledgeProcessor
+      telemetry:
+        specifier: workspace:*
+        version: link:../../telemetry
+      typeagent:
+        specifier: workspace:*
+        version: link:../../typeagent
+      typechat:
+        specifier: ^0.1.1
+        version: 0.1.1(typescript@5.4.5)(zod@3.25.76)
+    devDependencies:
+      '@types/debug':
+        specifier: ^4.1.12
+        version: 4.1.12
+      copyfiles:
+        specifier: ^2.4.1
+        version: 2.4.1
+      prettier:
+        specifier: ^3.5.3
+        version: 3.5.3
+      rimraf:
+        specifier: ^6.0.1
+        version: 6.0.1
+      typescript:
+        specifier: ~5.4.5
+        version: 5.4.5
+
   packages/agents/github-cli:
     dependencies:
       '@typeagent/agent-sdk':
@@ -4337,6 +4386,9 @@ importers:
       email:
         specifier: workspace:*
         version: link:../agents/email
+      excel-agent:
+        specifier: workspace:*
+        version: link:../agents/excel
       exifreader:
         specifier: ^4.39.0
         version: 4.40.3

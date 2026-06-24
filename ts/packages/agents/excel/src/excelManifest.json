@@ -1,0 +1,10 @@
+{
+    "emojiChar": "📊",
+    "schema": {
+        "description": "Agent to generate excel formulas",
+        "schemaFile": "./excelActionSchema.ts",
+        "schemaType": "ExcelAction",
+        "injected": false,
+        "cached": true
+    }
+}

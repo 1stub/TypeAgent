@@ -55,6 +55,7 @@
     "debug": "^4.4.0",
     "desktop-automation": "workspace:*",
     "discord-agent": "workspace:*",
+	"excel-agent": "workspace:*",
     "dispatcher-node-providers": "workspace:*",
     "email": "workspace:*",
     "exifreader": "^4.39.0",
